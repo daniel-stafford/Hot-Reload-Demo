@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D816D3428B78D1D002E81AA /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 8D816D3328B78D1D002E81AA /* Inject */; };
 		8DDBB5BA28B78BA400A40023 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBB5B928B78BA400A40023 /* AppDelegate.swift */; };
 		8DDBB5BE28B78BA400A40023 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBB5BD28B78BA400A40023 /* ViewController.swift */; };
 		8DDBB5C328B78BA600A40023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DDBB5C228B78BA600A40023 /* Assets.xcassets */; };
 		8DDBB5C628B78BA600A40023 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DDBB5C428B78BA600A40023 /* LaunchScreen.storyboard */; };
+		8DEE871428BCC71300D07C08 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 8DEE871328BCC71300D07C08 /* Inject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D816D3428B78D1D002E81AA /* Inject in Frameworks */,
+				8DEE871428BCC71300D07C08 /* Inject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +80,7 @@
 			);
 			name = HotReloadDemo;
 			packageProductDependencies = (
-				8D816D3328B78D1D002E81AA /* Inject */,
+				8DEE871328BCC71300D07C08 /* Inject */,
 			);
 			productName = HotReloadDemo;
 			productReference = 8DDBB5B628B78BA400A40023 /* HotReloadDemo.app */;
@@ -111,7 +111,7 @@
 			);
 			mainGroup = 8DDBB5AD28B78BA400A40023;
 			packageReferences = (
-				8D816D3228B78D1D002E81AA /* XCRemoteSwiftPackageReference "Inject" */,
+				8DEE871228BCC71300D07C08 /* XCRemoteSwiftPackageReference "Inject" */,
 			);
 			productRefGroup = 8DDBB5B728B78BA400A40023 /* Products */;
 			projectDirPath = "";
@@ -291,7 +291,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = (
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = (
 					"-Xlinker",
 					"-interposable",
 				);
@@ -322,10 +322,6 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_LDFLAGS = (
-					"-Xlinker",
-					"-interposable",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = danielstafford.HotReloadDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -358,20 +354,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8D816D3228B78D1D002E81AA /* XCRemoteSwiftPackageReference "Inject" */ = {
+		8DEE871228BCC71300D07C08 /* XCRemoteSwiftPackageReference "Inject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/krzysztofzablocki/Inject.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8D816D3328B78D1D002E81AA /* Inject */ = {
+		8DEE871328BCC71300D07C08 /* Inject */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8D816D3228B78D1D002E81AA /* XCRemoteSwiftPackageReference "Inject" */;
+			package = 8DEE871228BCC71300D07C08 /* XCRemoteSwiftPackageReference "Inject" */;
 			productName = Inject;
 		};
 /* End XCSwiftPackageProductDependency section */
